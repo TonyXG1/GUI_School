@@ -292,7 +292,7 @@ public class avtokushta extends JFrame {
 				else if (rdbtnMercedes.isSelected()) {cena+=40000;kola = "Mercedes";}
 				else if (rdbtnFiat.isSelected()) {cena+=9750;kola = "Fiat";}
 				else if (rdbtnPorsche.isSelected()) {cena+=140000;luks = true;kola = "Porschе";}
-				else if (rdbtnLambo.isSelected()) {cena+=780000;luks = true;kola = "Lambo";}
+				else if (rdbtnLambo.isSelected()) {cena+=780000;luks = true;kola = "Lamborghini";}
 				else if (rdbtnBugatti.isSelected()) {cena+=2500000;luks = true;kola = "Bugatti";}
 				
 				else JOptionPane.showMessageDialog(null, "Моля изберете желаната от вас марка кола!", "Грешка", JOptionPane.ERROR_MESSAGE);
@@ -425,6 +425,34 @@ public class avtokushta extends JFrame {
 		contentPane.add(btnPreview);
 		
 		JButton btnClear = new JButton("Изчисти");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				rdbtnVolkswagen.setSelected(false);
+				rdbtnToyota.setSelected(false);
+				rdbtnHonda.setSelected(false);
+				rdbtnMercedes.setSelected(false);
+				rdbtnFiat.setSelected(false);
+				rdbtnPorsche.setSelected(false);
+				rdbtnLambo.setSelected(false);
+				rdbtnBugatti.setSelected(false);
+				comboBox.setSelectedIndex(0);
+				rdbtnred.setSelected(false);
+				rdbtnblue.setSelected(false);
+				rdbtngreen.setSelected(false);
+				rdbtnyellow.setSelected(false);
+				rdbtnblack.setSelected(false);
+				rdbtnpurple.setSelected(false);
+				rdbtngray.setSelected(false);
+				rdbtnorange.setSelected(false);
+				chckbx1.setSelected(false);
+				chckbx2.setSelected(false);
+				chckbx3.setSelected(false);
+				chckbx4.setSelected(false);
+				panel_color.setBackground(Color.WHITE);
+				
+				
+			}
+		});
 		btnClear.setForeground(Color.WHITE);
 		btnClear.setFont(new Font("Arial Black", Font.PLAIN, 15));
 		btnClear.setBackground(new Color(25, 25, 112));
